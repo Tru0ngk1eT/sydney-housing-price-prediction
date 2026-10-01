@@ -4,7 +4,7 @@ SIT (Deakin) 8.1D Mini Project. Predicts sale prices for properties in Cabramatt
 Bankstown and Marrickville using 93 sold listings from realestate.com.au (March–September 2026).
 
 ## Files
-- `sydney_housing.csv` – collected dataset (93 sold properties, 31 per suburb)
+- `sydney_housing.csv` – collected dataset (176 sold properties)
 - `8.1D.ipynb` – data cleaning, EDA, feature engineering, model training and evaluation
 - `app.py` – Streamlit web app for price prediction
 - `model.joblib` – trained Linear Regression model used by the app
