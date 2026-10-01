@@ -1,7 +1,7 @@
 # Sydney Housing Price Prediction and Decision Support System
 
 SIT (Deakin) 8.1D Mini Project. Predicts sale prices for properties in Cabramatta,
-Bankstown and Marrickville using 93 sold listings from realestate.com.au (March–September 2026).
+Bankstown and Marrickville using 93 sold listings from realestate.com.au (2026).
 
 ## Files
 - `sydney_housing.csv` – collected dataset (176 sold properties)
