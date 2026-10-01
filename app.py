@@ -4,15 +4,15 @@ from pathlib import Path
 b = joblib.load(Path(__file__).parent / "model.joblib")
 
 st.title("Sydney Housing Price Estimator")
-st.caption("Cabramatta, Bankstown, Marrickville — trained on 93 sales (2026)")
+st.caption("Cabramatta, Bankstown, Marrickville — trained on 176 sales (2026)")
 
 suburb = st.selectbox("Suburb", ["Cabramatta", "Bankstown", "Marrickville"])
 ptype = st.selectbox("Property type", ["house", "duplex", "townhouse", "unit"])
 bed = st.number_input("Bedrooms", 1, 6, 2)
 bath = st.number_input("Bathrooms", 1, 5, 1)
-car = st.number_input("Car spaces", 0, 6, 1)
+car = st.number_input("Car spaces", 0, 9, 1)
 strata = ptype in ["unit", "townhouse"]
-land = 0 if strata else st.number_input("Land size (m²)", 100, 1300, int(b["house_land"]))
+land = 0 if strata else st.number_input("Land size (m²)", 100, 1650, int(b["house_land"]))
 
 if st.button("Predict price"):
     row = pd.DataFrame([dict.fromkeys(b["columns"], 0)])
